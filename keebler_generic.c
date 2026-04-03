@@ -18,6 +18,9 @@ char usage[] =
 Note: payload must be in flat binary format.\n\
 ";
 
+int writeFile(char *path, void *buffer, off_t size);
+int readFile(char *path, void **buffer, off_t *size);
+
 int main(int argc, char *argv[]){
   if( argc != 4 ){
     printf(usage, argv[0]);
